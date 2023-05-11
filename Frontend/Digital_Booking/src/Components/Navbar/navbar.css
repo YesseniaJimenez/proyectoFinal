@@ -1,0 +1,36 @@
+.header{
+    background-image: linear-gradient(to right, #FFD700, black);
+    padding: 1.5em;
+}
+
+.navBar{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.navBar > .buttons {
+    display: none;
+}
+
+
+.button{
+    margin: 0.2em;
+}
+
+.material-symbols-outlined{
+    color: black;
+    font-size: 2em;
+    background: white;
+    border-radius: 0.3em;
+    padding: 0.1em;
+
+}
+
+@media (min-width: 641px) {
+    .navBar > .buttons {
+        display: block;
+    }
+    
+}
+

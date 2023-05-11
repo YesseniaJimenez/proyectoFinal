@@ -4,23 +4,26 @@ import Login from './Routes/Login'
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom"
 import './App.css'
 import { routes } from './Navigation/Routes'
+import ProtectedRoutes from './Components/ProtectedRoutes'
 
 function App() {
-    
+
     return (
         <BrowserRouter>
             <Routes>
                 <Route path='/login' element={<Login />} />
-                <Route element={<Layout />}>
-                    {
-                        routes.map(({ id, path, Component}) => {
-                            return (
-                                <Route key={id} path={path} element={<Component />} />
-                            )   
-                        })
-                    }
+                <Route element={<ProtectedRoutes />}>
+                    <Route element={<Layout />}>
+                        {
+                            routes.map(({ id, path, Component}) => {
+                                return (
+                                    <Route key={id} path={path} element={<Component />} />
+                                )   
+                            })
+                        }
+                    </Route>
                 </Route>
-                <Route path='/' element={<Navigate to="/login" />}/>
+                <Route path='/' element={<Navigate to="/login" />} />
             </Routes>
         </BrowserRouter>
     )
