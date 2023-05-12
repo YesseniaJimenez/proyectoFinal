@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
 
 const Footer = () => {
   return (
-    <div>Footer</div>
-  )
-}
+    <footer className="footer">
+      <img src="/Componentlogo3.png" id="logoFooter" alt="DB🎷" width={200} />
+      <p className="copyright">© 2023 Digital Booking</p>
+    </footer>
+  );
+};
 
-export default Footer
+export default Footer;
