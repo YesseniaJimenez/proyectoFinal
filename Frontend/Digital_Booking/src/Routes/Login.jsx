@@ -14,7 +14,6 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault()
     handleLogin()
-    console.log(email, password)
     navigate("/home")
   }
   return (
