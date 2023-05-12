@@ -20,7 +20,12 @@ export const routes = [
         id: 3,
         path: "/add",
         Component: AddProduct
-    }
+    },
+    // {
+    //     id: 4,
+    //     path: "/menumobile",
+    //     Component: MenuMobile
+    // }
 
 ]
 

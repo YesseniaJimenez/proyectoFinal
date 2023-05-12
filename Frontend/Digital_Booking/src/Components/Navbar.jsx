@@ -1,12 +1,14 @@
-import React from 'react'
-import logo from "../../assets/logo1.png"
-import "./navbar.css"
-import { Link } from "react-router-dom"
+import React, { useState } from 'react'
+import MenuMobile from '../Routes/MenuMobile'
+import logo from "../assets/logo1.png"
+import { Link, useNavigate } from "react-router-dom"
 
 const Navbar = () => {
 
-    const displayMenu = () => {
+    const navigate = useNavigate()
 
+    const displayMenu = () => {
+        navigate("/menumobile")
     }
 
     return (
