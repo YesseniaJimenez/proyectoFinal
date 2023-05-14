@@ -1,28 +1,25 @@
-import React, { useState } from 'react'
-import MenuMobile from '../Routes/MenuMobile'
+import React from 'react'
 import logo from "../assets/logo1.png"
-import { Link, useNavigate } from "react-router-dom"
+import { Link } from "react-router-dom"
+import { useState } from 'react'
 
 const Navbar = () => {
 
-    const navigate = useNavigate()
+    const [clickLogo, setClickLogo] = useState(false)
 
-    const displayMenu = () => {
-        navigate("/menumobile")
+    const openMenu = () => { 
+        setClickLogo(!clickLogo)
     }
 
     return (
         <header className='header'>
             <nav className='navBar'>
-                <div>
-                    <Link className='link-logo' to="/home"><img src={logo} alt="logo" /></Link>
-                    <p className='parrafo-header'>Lleva la musica con vos</p>
-                </div>
-                <span className="material-symbols-outlined" onClick={displayMenu}>menu</span>
-                <div className="buttons" >
-                    <button className='button'>Crear cuenta</button>
-                    <button className='button'>Iniciar sesión</button>
-                </div>
+                <Link className='link-logo' to="/home"><img src={logo} alt="logo" className='logo' /></Link>
+                <p className='parrafo-header'>Lleva la musica con vos</p>
+                
+                <span className="material-symbols-outlined" onClick={openMenu}>menu</span>
+                <button className={clickLogo ? "button responsive" : "button"}>Crear cuenta</button>
+                <button className={clickLogo ? "button responsive" : "button"}>Iniciar sesión</button>                
             </nav>
         </header>
     )

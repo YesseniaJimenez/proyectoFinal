@@ -6,7 +6,6 @@ import "./App.css";
 import { routes } from "./Navigation/Routes";
 import ProtectedRoutes from "./Components/ProtectedRoutes";
 import ContextLoginProvider from "./Context/LoginContext";
-import MenuMobile from "./Routes/MenuMobile";
 
 function App() {
 	return (
@@ -21,7 +20,6 @@ function App() {
 									return <Route key={id} path={path} element={<Component />} />;
 								})}
 							</Route>
-							<Route path="/menumobile" element={<MenuMobile />} />
 						</Route>
 						<Route path="/" element={<Navigate to="/login" />} />
 					</Routes>

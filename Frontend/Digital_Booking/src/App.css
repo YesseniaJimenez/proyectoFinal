@@ -1,13 +1,13 @@
+/* ------------ Header ------------ */
+
 .header {
-	background-color: #DB9F2A;
+	background-color: #FFFFFF;
+	margin-bottom: 10px;
 }
 
 .navBar {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 0.3em 1em 0.3em 1em;
-	height: 80px;
+	overflow: hidden;
+	position: relative;
 }
 
 .link-logo {
@@ -15,19 +15,22 @@
 	color: black;
 }
 
+.logo {
+	margin: 0.5em 0 0.3em 0.5em
+}
+
 .parrafo-header {
-	display: inline;
+	display: inline-block;
 	margin-left: 0.5em;
+	margin-bottom: 0;
 	font-size: 0.9em;
 	font-style: italic;
 }
 
-.navBar>.buttons {
-	display: none;
-}
-
 .button {
-	margin: 0.3em;
+	display: block;
+	float: right;
+	margin: 1em;
 	border-radius: 0.3em;
 	border: 2px solid #F9C33C;
 	width: 12.875em;
@@ -41,53 +44,14 @@
 	font-size: 2em;
 	border-radius: 0.3em;
 	cursor: pointer;
+	float: right;
+	position: absolute;
+	right: 0.7em;
+	top: 0.5em;
+	display: none;
 }
 
-.material-symbols-outlined:hover {
-	color: white;
-}
-
-@media (min-width: 641px) and (max-width: 1007px) {
-	.button {
-		width: 10.25em;
-		height: 2.8em;
-	}
-
-	.navBar>.buttons {
-		display: block;
-	}
-
-	.material-symbols-outlined {
-		display: none;
-	}
-}
-
-@media (min-width: 1008px) {
-	.navBar>.buttons {
-		display: block;
-	}
-
-	.material-symbols-outlined {
-		display: none;
-	}
-}
-
-.menu-top {
-	display: flex;
-}
-
-.div-menu-buttons {
-	display: flex;
-	flex-direction: column;
-	align-items: flex-end;
-}
-
-.menu-button{
-}
-
-.linea{
-	color: black;
-}
+/* ------------ Footer ------------ */
 
 .footer {
 	background-color: #FBC02D;
@@ -99,4 +63,175 @@
 
 .copyright {
 	margin: 0;
+}
+
+/* ------------ Search and Calendar ------------ */
+
+.search-div {
+	background-color: #FBC02D;
+	text-align: center;
+	padding-bottom: 26px;
+}
+
+.search-div>h1 {
+	color: white;
+	font-size: 2em;
+	padding: 0.5em 0 0.5em;
+	margin: 0;
+}
+
+.search-input {
+	width: 31em;
+	height: 2.5em;
+	margin: 0.2em;
+	border-radius: 5px;
+}
+
+.search-input.text {
+	border: 2px solid white;
+}
+
+.search-input.calendar {
+	border: 3px solid white;
+}
+
+.search-button {
+	width: 12.875em;
+	height: 2.9em;
+	color: #4F4F50;
+	background-color: #FFFBE2;
+	border: 1px solid #FFFBE2;
+	border-radius: 5px;
+	margin-left: 0.2em;
+}
+
+/* ------------ Search by Category ------------ */
+
+.search-category {
+	background-color: white;
+	padding-left: 2.5em;
+}
+
+.search-category>h2 {
+	font-size: 1.5em;
+	font-weight: 400;
+	margin: 0.4em 0 0.4em;
+}
+
+/* Recomendations */
+
+.recomendations {
+	background-color: rgb(235, 235, 235);
+	padding-left: 2.5em;
+	padding-top: 0.4em;
+}
+
+.recomendations>h2 {
+	font-size: 1.5em;
+	font-weight: 400;
+	margin: 0 0 0.4em;
+}
+
+/* ------------ Tablet ------------ */
+
+@media (min-width: 641px) and (max-width: 1007px) {
+	/* ------------ Header ------------ */
+	.button {
+		width: 10.25em;
+		height: 2.8em;
+		float: right;
+		display: block;
+	}
+
+	.material-symbols-outlined {
+		display: none;
+	}
+
+	/* ------------ Search and Calendar ------------ */
+
+	.search-input {
+		width: 15.875em;
+	}
+
+	.search-div>h1 {
+		font-size: 1.8em;
+	}
+
+	/* ------------ Search by Category ------------ */
+
+	.search-category {
+		padding-top: 1.7em;
+		padding-left: 0.5em;
+	}
+
+	/* ------------ Recomendations ------------ */
+
+	.recomendations {
+		padding-left: 0.5em;
+	}
+
+	
+}
+
+/* ------------ Mobile ------------ */
+
+@media (max-width: 640px) {
+	/* ------------ Header ------------ */
+
+	.material-symbols-outlined {
+		display: block;
+	}
+
+	.button {
+		display: none;
+	}
+
+	.button.responsive {
+		float: right;
+		display: block;
+	}
+
+	/* ------------ Search and Calendar ------------ */
+
+	.search-div>h1 {
+		padding-left: 1em;
+		padding-right: 1em;
+		font-size: 1.5em;
+	}
+
+	.search-input {
+		width: 27em;
+		color: #7F7F7F;
+		
+	}
+
+	.search-button {
+		width: 27.5em;
+		margin-top: 0.3em;
+		margin-left: 0;
+	}
+
+	/* ------------ Search by Category ------------ */
+
+	.search-category {
+		padding-top: 1.7em;
+		padding-left: 0.5em;
+	}
+
+	.search-category>h2 {
+		color: #FBC02D;
+	}
+
+
+
+	/* ------------ Recomendations ------------ */
+
+	.recomendations {
+		padding-left: 0.5em;
+	}
+
+	.recomendations>h2 {
+		color: #FBC02D;
+	}
+
 }

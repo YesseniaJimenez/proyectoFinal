@@ -21,12 +21,6 @@ export const routes = [
         path: "/add",
         Component: AddProduct
     },
-    // {
-    //     id: 4,
-    //     path: "/menumobile",
-    //     Component: MenuMobile
-    // }
-
 ]
 
 export { Login, Layout };
