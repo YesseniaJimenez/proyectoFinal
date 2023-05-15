@@ -1,8 +1,15 @@
+.App{
+	height: 100%;
+}
+
 /* ------------ Header ------------ */
 
 .header {
 	background-color: #FFFFFF;
 	margin-bottom: 10px;
+	width: 100%;
+	position: fixed;
+	top: 0;
 }
 
 .navBar {
@@ -49,6 +56,13 @@
 	right: 0.7em;
 	top: 0.5em;
 	display: none;
+}
+
+/* ------------ Main Home ------------ */
+
+.main-home {
+	height: 100%;
+	margin-top: 4.5625em;
 }
 
 /* ------------ Footer ------------ */
@@ -110,31 +124,66 @@
 .search-category {
 	background-color: white;
 	padding-left: 2.5em;
+	padding-right: 2.5em;
+	padding-bottom: 2.5em;
 }
 
 .search-category>h2 {
 	font-size: 1.5em;
 	font-weight: 400;
 	margin: 0.4em 0 0.4em;
+	padding-left: 0.8em;
 }
 
-/* Recomendations */
+.search-category .category-cards {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	gap: 5px;
+}
+
+/* ------------ Recomendations ------------ */
 
 .recomendations {
 	background-color: rgb(235, 235, 235);
-	padding-left: 2.5em;
-	padding-top: 0.4em;
+	padding: 0.4em 2.5em 2.5em 2.5em;
 }
 
 .recomendations>h2 {
 	font-size: 1.5em;
 	font-weight: 400;
 	margin: 0 0 0.4em;
+	padding-left: 0.8em;
+}
+
+.recomendations .recomendation-cards {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+/* ------------ Card ------------ */
+
+.card {
+	box-shadow: 0px 2px rgb(192, 192, 192);
+	border-radius: 0 0 10px 10px;
+}
+
+.card > a > img {
+	border-radius: 10px 10px 0 0;
+}
+
+.card > p:first-of-type {
+	margin-top: 0.7em;
+}
+
+.card > p {
+	padding-left: 0.7em;
 }
 
 /* ------------ Tablet ------------ */
 
-@media (min-width: 641px) and (max-width: 1007px) {
+@media (min-width: 656px) and (max-width: 1007px) {
 	/* ------------ Header ------------ */
 	.button {
 		width: 10.25em;
@@ -160,14 +209,23 @@
 	/* ------------ Search by Category ------------ */
 
 	.search-category {
-		padding-top: 1.7em;
-		padding-left: 0.5em;
+		padding: 1.7em 0.6em 2.7em 0.6em;
+	}
+
+	.search-category .category-cards {
+		gap: 1.25em;
+		margin-top: 1.875em;
 	}
 
 	/* ------------ Recomendations ------------ */
 
 	.recomendations {
-		padding-left: 0.5em;
+		padding: 1.7em 0.6em 2.7em 0.6em;
+	}
+
+	.recomendations .recomendation-cards {
+		gap: 1.25em;
+		margin-top: 1.875em;
 	}
 
 	
@@ -175,7 +233,7 @@
 
 /* ------------ Mobile ------------ */
 
-@media (max-width: 640px) {
+@media (max-width: 655px) {
 	/* ------------ Header ------------ */
 
 	.material-symbols-outlined {
@@ -216,22 +274,34 @@
 	.search-category {
 		padding-top: 1.7em;
 		padding-left: 0.5em;
+		padding-right: 0.5em;
 	}
 
 	.search-category>h2 {
 		color: #FBC02D;
 	}
 
+	.search-category .category-cards {
+		gap: 1.25em;
+		margin-top: 1.875em;
+	}
 
 
 	/* ------------ Recomendations ------------ */
 
 	.recomendations {
 		padding-left: 0.5em;
+		padding-right: 0.5em;
+		padding-top: 2.5em;
 	}
 
 	.recomendations>h2 {
 		color: #FBC02D;
+	}
+
+	.recomendations .recomendation-cards {
+		gap: 1.25em;
+		margin-top: 1.875em;
 	}
 
 }

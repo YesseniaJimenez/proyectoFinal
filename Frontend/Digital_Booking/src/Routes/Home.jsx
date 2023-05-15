@@ -3,7 +3,7 @@ import Card from '../Components/Card'
 
 const Home = () => {
 	return (
-		<>
+		<main className='main-home'>
 			<div className='search-div'>
 				<h1>Desarrollá tu pasión sin gastar de más</h1>
 				<form action="">
@@ -15,7 +15,7 @@ const Home = () => {
 
 			<div className='search-category'>
 				<h2>Buscar por Categoría</h2>
-				<div className="category-cards" style={{display: "flex", justifyContent: "space-around"}}>
+				<div className="category-cards">
 					<Card />
 					<Card />
 					<Card />
@@ -25,12 +25,12 @@ const Home = () => {
 			
 			<div className="recomendations">
 				<h2>Recomendaciones</h2>
-				<div className="recomendation-cards" style={{display: "flex", justifyContent: "space-around"}}>
+				<div className="recomendation-cards">
 					<Card />
 					<Card />
 				</div>
 			</div>
-		</>
+		</main>
 	)
 }
 

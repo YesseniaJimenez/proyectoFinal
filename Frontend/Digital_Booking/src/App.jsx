@@ -9,7 +9,7 @@ import ContextLoginProvider from "./Context/LoginContext";
 
 function App() {
 	return (
-		<div>
+		<div className="App">
 			<BrowserRouter>
 				<ContextLoginProvider>
 					<Routes>
