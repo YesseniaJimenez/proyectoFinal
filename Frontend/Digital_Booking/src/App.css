@@ -1,5 +1,12 @@
 .App{
-	height: 100%;
+	box-sizing: border-box;
+}
+
+.layout{
+	display: flex;
+	flex: 1 1 0%;
+	flex-direction: column;
+	min-height: 100vh;
 }
 
 /* ------------ Header ------------ */
@@ -44,6 +51,7 @@
 	height: 2.8em;
 	background-color: #FFFBE2;
 	color: #F9C33C;
+	cursor: pointer;
 }
 
 .material-symbols-outlined {
@@ -61,7 +69,9 @@
 /* ------------ Main Home ------------ */
 
 .main-home {
-	height: 100%;
+	display: flex;
+	flex-direction: column;
+	flex: flex 1;
 	margin-top: 4.5625em;
 }
 
@@ -173,18 +183,52 @@
 	border-radius: 10px 10px 0 0;
 }
 
-.card > p:first-of-type {
+.card > .link-cards {
+	text-decoration: underline;
+	color: black;
+}
+
+.card > .link-cards > p:first-of-type {
 	margin-top: 0.7em;
 }
 
-.card > p {
+.card > .link-cards > p {
 	padding-left: 0.7em;
 }
+
+/* ------------ Add Product ------------ */
+
+.container-addProduct {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	margin-top: 4.5625em;
+}
+
+.form-addProduct {
+	border: 1px solid red;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.form-addProduct > input {
+	width: 18.75em;
+	height: 1.125em;
+}
+
+.form-addProduct > button {
+	width: 9.375em;
+}
+
+
+
 
 /* ------------ Tablet ------------ */
 
 @media (min-width: 656px) and (max-width: 1007px) {
 	/* ------------ Header ------------ */
+
 	.button {
 		width: 10.25em;
 		height: 2.8em;
@@ -228,7 +272,6 @@
 		margin-top: 1.875em;
 	}
 
-	
 }
 
 /* ------------ Mobile ------------ */
