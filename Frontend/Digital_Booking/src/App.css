@@ -1,5 +1,6 @@
 .App{
 	box-sizing: border-box;
+	font-size: 13px;
 }
 
 .layout{
@@ -84,9 +85,17 @@
 	flex-direction: column;
 	width: 100%;
 }
+.logoSlogan{
+	display: flex;
+}
+.Pfooter{
+	margin-top: 35px;
+	
+}
 
 .copyright {
 	margin: 0;
+	margin-left: 20px;
 }
 
 /* ------------ Search and Calendar ------------ */
